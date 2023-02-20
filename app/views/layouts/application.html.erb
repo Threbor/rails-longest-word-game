@@ -9,7 +9,10 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
+  <div id="navbar">
+    <div><%= link_to "voir la page home", home_path %></div>
+    <div><%= link_to "voir la page new", new_path %></div>
+  </div>
   <body>
     <%= yield %>
   </body>

@@ -1,0 +1,12 @@
+<h1>page new</h1>
+<ul class="lettersGrid">
+<% @random_letters.each do |random_letter| %>
+<li class="randomLetters" ><%= random_letter %></li>
+<% end %>
+</ul>
+<form action="score" method="POST" data-turbo="false" class="form">
+  <input type="text" name="formulaire">
+  <input type="submit" value="Ask!">
+  <%= hidden_field_tag :random_letters, @random_letters %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
